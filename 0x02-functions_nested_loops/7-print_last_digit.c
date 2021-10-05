@@ -6,9 +6,9 @@
  *
  * Return: Always 1 (Success)
  */
-int print_last_digit(int n)
+int print_last_digit(long n)
 {
-int x = n;
+long x = n;
 if (x < 0)
 x = -x;
 if (x > 10)
