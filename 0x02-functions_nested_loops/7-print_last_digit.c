@@ -6,7 +6,7 @@
  *
  * Return: Always 1 (Success)
  */
-int print_last_digit(long n)
+int print_last_digit(int n)
 {
 long x = n;
 if (x < 0)
