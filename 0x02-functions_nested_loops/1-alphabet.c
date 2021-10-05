@@ -14,7 +14,7 @@ return (0);
  *
  * Return: Always 0.
  */
-print_alphabet(void)
+void print_alphabet(void)
 {
 char c = 'a';
 for (; c < 'z'; c++)
