@@ -1,24 +1,4 @@
-#include "main.h"
-
-/**
- * main - check the code.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-int r;
-r = _isalpha('H');
-_putchar(r + '0');
-r = _isalpha('o');
-_putchar(r + '0');
-r = _isalpha(108);
-_putchar(r + '0');
-r = _isalpha(';');
-_putchar(r + '0');
-_putchar('\n');
-return (0);
-}
+#include"main.h"
 /**
  * _isalpha - Entry point
  *
@@ -26,16 +6,9 @@ return (0);
  *
  * Return: Always 1 (Success)
  */
-int _isalpha(char c)
+int _isalpha(int c)
 {
-char x = 'a';
-char X = 'A'
-while (x <= 'z')
-{
-if ((c == x) || (c == X))
+if (((c >= 97) && (c <= 122)) || ((c >= 65) && (c <= 92)))
 return (1);
-x++;
-X++;
-}
 return (0);
 }
