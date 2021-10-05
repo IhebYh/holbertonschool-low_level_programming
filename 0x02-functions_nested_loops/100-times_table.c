@@ -16,8 +16,11 @@ k += j;
 _putchar(k + '0');
 _putchar(',');
 _putchar(' ');
+_putchar(' ');
 }
 _putchar(k + '0');
+_putchar(' ');
+_putchar(' '); 
 j++;
 _putchar('\n');
 }
