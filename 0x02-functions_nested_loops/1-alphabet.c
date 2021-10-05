@@ -1,4 +1,4 @@
-#include "main.h"
+#include"main.h"
 /**
  * main - check the code
  *
@@ -14,7 +14,7 @@ return (0);
  *
  * Return: Always 0.
  */
-int print_alphabet(void)
+print_alphabet(void)
 {
 char c = 'a';
 for (; c < 'z'; c++)
