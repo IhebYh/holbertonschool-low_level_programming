@@ -6,7 +6,7 @@
  */
 void print_times_table(int n)
 {
-int i, j, k;
+int i = 0, j = 0, k;
 while ((i <= n) && (j <= n))
 {
 k = 0;
