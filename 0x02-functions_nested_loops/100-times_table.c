@@ -7,7 +7,7 @@
 void print_times_table(int n)
 {
 int i, j, k;
-while ((i < n) && (j < n))
+while ((i <= n) && (j <= n))
 {
 k = 0;
 for (i = 0; i < n ; i++)
