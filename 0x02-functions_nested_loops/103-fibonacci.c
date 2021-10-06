@@ -7,7 +7,7 @@
 int main(void)
 {
   long int f = 3, i = 0, f1 = 1, f2 = 0, fe = 0;
-while (fe + f < 4000000)
+while (fe < 4000000)
 {
 if (f % 2 == 0)
 fe += f;
