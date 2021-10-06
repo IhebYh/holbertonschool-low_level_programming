@@ -16,5 +16,6 @@ f2 = f1;
 f1 = f;
 i++;
 }
-printf("%d\n", fe);
+printf("%ld\n", fe);
 return (0);
+}
