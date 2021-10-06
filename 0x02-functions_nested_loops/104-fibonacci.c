@@ -12,6 +12,7 @@ while (i < 89)
 f = f1 + f2;
 f2 = f1;
 f1 = f;
+i++;
 printf("%ld, ", f);
 }
 f_1 = f / 1000000000;
@@ -32,6 +33,7 @@ if (i == 97)
 printf("%ld%ld\n", f_1, f_0);
 else
 printf("%ld%ld, ", f_1, f_0);
+i++;
 }
 return (0);
 }
