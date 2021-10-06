@@ -12,7 +12,7 @@ while (i < 89)
 f = f1 + f2;
 f2 = f1;
 f1 = f;
-//printf("%ld, ", f);
+/*printf("%ld, ", f);*/
 i++;
 }
 f_1 = f / 1000000000;
@@ -29,10 +29,10 @@ f2_1 = f1_1;
 f2_0 = f1_0;
 f1_1 = f_1;
 f1_0 = f_0;
-//if (i == 98)
-  //printf("%ld%ld\n", f_1, f_0);
-//else
-  //printf("%ld%ld, ", f_1, f_0);
+/*if (i == 98)
+printf("%ld%ld\n", f_1, f_0);
+else
+printf("%ld%ld, ", f_1, f_0);*/
 i++;
 }
 return (0);
