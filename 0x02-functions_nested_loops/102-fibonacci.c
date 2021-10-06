@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-long int f= 3, i = 0, f1 = 1, f2 = 1;
+long int f= 3, i = 0, f1 = 1, f2 = 0;
 while(i < 48){
 f = f1 + f2;
 f2 = f1;
