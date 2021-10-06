@@ -13,7 +13,7 @@ f = f1 + f2;
 f2 = f1;
 f1 = f;
 if (i == 49)
-printf("%ld ", f);
+printf("%ld", f);
 else
 printf("%ld, ", f);
 i++;
