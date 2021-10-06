@@ -11,7 +11,7 @@ while(i < 48){
 f = f1 + f2;
 f1 = f - 1;
 f2 = f - 2;
-printf("%d, ", f);
+printf("%ld, ", f);
 i++;
 }
 return (0);
