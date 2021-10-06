@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-int i, s = 0;
-for (i = 0; i < 1024; i++)
+int i, s = 23;
+for (i = 10; i < 1024; i++)
 {
 if (i % 3 == 0)
 s += i;
 if (i % 5 == 0)
 s += i;
 }
-printf("%d \n", s);
+printf("%d\n", s);
 return (0);
 }
