@@ -7,14 +7,13 @@
  */
 void print_multiple(void)
 {
-int i, s3 = 0, s5 = 0;
+int i, s = 0;
 for (i = 0; i < 1024; i++)
 {
 if (i % 3 == 0)
-s3 += i;
+s += i;
 if (i % 5 == 0)
-s5 += i;
+s += i;
 }
-printf("The sum of all the multiples of 5 below 1024: %d \n", s5);
-printf("The sum of all the multiples of 3 below 1024: %d \n", s3);
+printf("%d \n", s);
 }
