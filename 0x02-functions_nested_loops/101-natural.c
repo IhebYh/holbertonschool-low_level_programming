@@ -11,7 +11,7 @@ for (i = 10; i < 1024; i++)
 {
 if (i % 3 == 0)
 s += i;
-if (i % 5 == 0)
+else if (i % 5 == 0)
 s += i;
 }
 printf("%d\n", s);
