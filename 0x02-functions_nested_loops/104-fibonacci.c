@@ -30,11 +30,10 @@ f2_0 = f1_0;
 f1_1 = f_1;
 f1_0 = f_0;
 if (i == 97)
-printf("%ld%ld", f_1, f_0);
+printf("%ld%ld\n", f_1, f_0);
 else
 printf("%ld%ld, ", f_1, f_0);
 i++;
 }
-printf("\n");
 return (0);
 }
