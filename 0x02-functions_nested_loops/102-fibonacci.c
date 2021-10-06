@@ -18,5 +18,6 @@ else
 printf("%ld, ", f);
 i++;
 }
+printf("\n");
 return (0);
 }
