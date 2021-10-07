@@ -24,7 +24,7 @@ break;
 }
 }
 if (isPrime == 1)
-printf("%d, ", i);
+printf("%ld, ", i);
 }
 }
 printf("/n");
