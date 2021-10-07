@@ -2,8 +2,8 @@
 
 /**
  * print_number - print number
- * @n: first integer
- * Return: 0
+ * @n: first int
+ * Return : void
  */
 
 void print_number(int n)
