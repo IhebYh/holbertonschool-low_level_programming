@@ -18,10 +18,13 @@ isPrime = 1;
 for (j = 2; j <= i / 2; j++)
 {
 if (i % j == 0)
+{
 isPrime = 0;
-if (isPrime == 0)
-printf("%d, ", n);
+break;
 }
+}
+if (isPrime == 1)
+printf("%d, ", i);
 }
 }
 printf("/n");
