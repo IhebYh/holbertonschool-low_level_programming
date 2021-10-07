@@ -27,6 +27,6 @@ if (isPrime == 1)
 printf("%ld, ", i);
 }
 }
-printf("/n");
+printf("\n");
 return (0);
 }
