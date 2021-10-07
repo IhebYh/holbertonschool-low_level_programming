@@ -15,7 +15,7 @@ for (i = 48; i < 58; i++)
 if ((i == 51) || (i == 53))
 continue;
 else
-_putchar('i');
+_putchar(i);
 }
 _putchar('\n');
 }
