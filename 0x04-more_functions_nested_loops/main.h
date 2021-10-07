@@ -2,8 +2,8 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include "_putchar.c"
 
+int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
