@@ -8,24 +8,16 @@
 
 int main(void)
 {
-long int i, j, n = 612852475143, isPrime;
+  long int i, n = 612852475143;
 
-for (i = 2; i <= n; i++)
+while (i <= n)
 {
-if (n % i == 0)
-{
-isPrime = 1;
-for (j = 2; j <= i / 2; j++)
-{
-if (i % j == 0)
-{
-isPrime = 0;
-break;
-}
-}
-if (isPrime == 1)
+if (n % i == 0){
 printf("%ld, ", i);
+n=n/i;
+i=2;
 }
+else i++;
 }
 printf("\n");
 return (0);
