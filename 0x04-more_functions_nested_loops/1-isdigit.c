@@ -1,0 +1,17 @@
+#include "main.h"
+
+/**
+ * _isdigit - returns 1 if it's a digit
+ * @c : int
+ * Return: 1 or 0
+ */
+int _isdigit(int c)
+{
+int i;
+for (i = 0; i < 9; i++)
+{
+if (c == i)
+return (1);
+}
+return (0);
+}
