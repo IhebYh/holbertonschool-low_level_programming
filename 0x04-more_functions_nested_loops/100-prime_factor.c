@@ -8,17 +8,18 @@
 
 int main(void)
 {
-  long int i, n = 612852475143;
+long int i, n = 612852475143;
 
-while (i <= n)
+while (i < n)
 {
 if (n % i == 0){
 printf("%ld, ", i);
-n=n/i;
-i=2;
+n = n / i;
+i = 2;
 }
 else i++;
 }
+printf("%ld", i);
 printf("\n");
 return (0);
 }
