@@ -1,5 +1,5 @@
 #include "main.h"
-#include "holberton.h"
+
 /**
  * print_number - print number
  * @n: first int
