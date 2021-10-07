@@ -14,7 +14,6 @@ while (i < n)
 {
 if (n % i == 0)
 {
-printf("%ld, ", i);
 n = n / i;
 i = 2;
 }
