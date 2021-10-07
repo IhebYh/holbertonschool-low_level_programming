@@ -2,7 +2,7 @@
 
 /**
  * print_number - print number
- * @a: first integer
+ * @n: first integer
  * Return: 0
  */
 
@@ -12,9 +12,9 @@ int r = n;
 if (n < 0)
 {
 _putchar('-');
-r= -r;
+r = -r;
 }
-if((r / 10) > 0)
+if ((r / 10) > 0)
 print_number(r / 10);
 _putchar(x % 10 + '0');
 }
