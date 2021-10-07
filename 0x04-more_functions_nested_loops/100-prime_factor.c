@@ -12,12 +12,14 @@ long int i, n = 612852475143;
 
 while (i < n)
 {
-if (n % i == 0){
+if (n % i == 0)
+{
 printf("%ld, ", i);
 n = n / i;
 i = 2;
 }
-else i++;
+else
+i++;
 }
 printf("%ld", i);
 printf("\n");
