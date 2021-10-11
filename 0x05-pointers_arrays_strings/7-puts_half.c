@@ -14,7 +14,7 @@ if (n % 2)
 i = n / 2;
 else
 i = (n - 1) / 2;
-for (; i =< n; i++)
+for (; i <= n; i++)
 {
 _putchar(*(str + i));
 }
