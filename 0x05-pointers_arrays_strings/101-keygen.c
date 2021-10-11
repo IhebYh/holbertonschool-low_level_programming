@@ -11,7 +11,7 @@ int main(void)
 {
 char a[63] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 char pswd[100];
-int n = 0, i = 0;
+ int n = 0, i = 0, r;
 srand(time(NULL));
 while (n < (2645))
 {
