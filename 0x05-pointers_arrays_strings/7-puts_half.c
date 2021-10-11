@@ -11,10 +11,10 @@ int i = 0, n = 0;
 while (str[i++])
 n++;
 if (n % 2)
-i = n / 2;
+i = (n / 2) + 1;
 else
 i = (n - 1) / 2;
-for (; i <= n; i++)
+for (; i < n; i++)
 {
 _putchar(*(str + i));
 }
