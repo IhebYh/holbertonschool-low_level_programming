@@ -11,6 +11,8 @@ int i = 0, n = 0;
 while (str[i++])
 n++;
 i = (n / 2);
+if (n % 2)
+i++;
 for (; i < n; i++)
 {
 _putchar(*(str + i));
