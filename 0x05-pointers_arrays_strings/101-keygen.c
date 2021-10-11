@@ -20,7 +20,7 @@ pswd[i] = a[r];
 n = n + pswd[i];
 i++;
 }
-r = 2772 — n;
+r = 2772 - n;
 pswd[i] = r;
 return (0);
 }
