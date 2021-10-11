@@ -9,12 +9,11 @@
 void print_array(int *a, int n)
 {
 int i = 0;
-while(a[i])
+ for(; i < n; i++)
 {
-if (i == n - 1)
-break;
-printf("%d, ", *(a + i));
-i++;
+printf("%d", *(a + i));
+ if (i < (n - 1))
+   printf(", ");
 }
-printf("%d\n", *(a + (n - 1)));
+ printf("\n");
 }
