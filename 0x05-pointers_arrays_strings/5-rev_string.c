@@ -16,8 +16,8 @@ continue;
 n = i - 1;
 for (i = n; i >= n / 2 ; i--)
 {
-rev = s[i];
+rev[0] = s[i];
 s[i] = s[i - n];
-s[i - n] = rev;
+s[i - n] = rev[0];
 }
 }
