@@ -14,8 +14,10 @@ for (i = 0; s[i] != '\0'; i++)
 continue;
 }
 n = i - 1;
-for (i = n; i >= 0 ; i--)
+for (i = n; i >= n / 2 ; i--)
 {
-rev += s[i];
+rev = s[i];
+s[i] = s[i - n];
+s[i - n] = rev;
 }
 }
