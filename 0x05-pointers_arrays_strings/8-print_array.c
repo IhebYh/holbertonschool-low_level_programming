@@ -9,8 +9,10 @@
 void print_array(int *a, int n)
 {
 int i = 0;
-for (; i < n - 1; i++)
+while(a[i++])
 {
+if (i == n)
+break;
 printf("%d, ", *(a + i));
 }
 printf("%d\n", *(a + i));
