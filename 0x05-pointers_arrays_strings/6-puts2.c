@@ -15,7 +15,7 @@ continue;
 n = i;
 for (i = 0; i < n; i += 2)
 {
-  _putchar(*(s + i));
+_putchar(*(str + i));
 }
 _putchar('\n');
 }
