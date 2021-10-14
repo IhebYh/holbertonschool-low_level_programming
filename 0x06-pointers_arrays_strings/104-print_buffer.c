@@ -3,11 +3,11 @@
 
 /**
  * print_buffer - entry point
- * @buffer: char
+ * @b: char
  * @size: int
  * Return:void
  */
-void print_buffer(char *buffer, int size)
+void print_buffer(char *b, int size)
 {
 int i, j;
 for (i = 0; i < size; i += 10)
