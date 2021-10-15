@@ -15,5 +15,5 @@ r = -r;
 }
 if ((r / 10) > 0)
 print_number(r / 10);
-_putchar(x % 10 + '0');
+_putchar(r % 10 + '0');
 }
