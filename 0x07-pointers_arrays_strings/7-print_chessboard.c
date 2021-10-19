@@ -9,15 +9,17 @@
 
 void print_chessboard(char (*a)[8])
 {
-int i = 0;
-while (*a)
+int i = 0, j = 0;
+while (i < 8)
 {
-_putchar(*a[i]);
-if (i == 7)
+while (j < 8)
 {
-i = 0;
-_putchar('\n);
-a++;
+putchar(a[i][j]);
+j++;
 }
+j = 0;
+i++;
+if (i < 8)
+putchar('\n');
 }
 }
