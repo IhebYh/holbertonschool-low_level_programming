@@ -9,7 +9,7 @@
  * in @accept, or NULL if no such byte is found
  */
 
-unsigned int _strpbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 int j;
 while (*s)
