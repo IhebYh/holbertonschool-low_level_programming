@@ -18,7 +18,7 @@ int diag1 = 0, diag2 = 0;
 while (i < size)
 {
 diag1 += a[i];
-diag2 += a[n-i];
+diag2 += a[n - i];
 i++;
 a += size;
 }
