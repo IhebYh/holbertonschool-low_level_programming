@@ -21,6 +21,11 @@ needle++;
 if (*needle == '\0')
 return (haystack);
 }
+else
+{
+*needle -= i;
+i =0;
+}
 haystack++;
 }
 return ('\0');
