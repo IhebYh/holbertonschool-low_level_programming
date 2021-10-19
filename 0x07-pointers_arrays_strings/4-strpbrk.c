@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strspn - searches a string for any of a set of bytes
+ * _strpbrk - searches a string for any of a set of bytes
  *
  * @s: segment to return bytes from
  * @accept: the bytes to include
@@ -9,7 +9,7 @@
  * in @accept, or NULL if no such byte is found
  */
 
-unsigned int _strspn(char *s, char *accept)
+unsigned int _strpbrk(char *s, char *accept)
 {
 int i, j;
 for (i = 0; s[i] != '\0'; i++)
