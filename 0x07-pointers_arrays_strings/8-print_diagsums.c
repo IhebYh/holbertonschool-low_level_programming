@@ -15,10 +15,12 @@ void print_diagsums(int *a, int size)
 int i = 0, n = size - 1;
 int diag1 = 0, diag2 = 0;
 
-for (; i < n; i++)
+while(i < size)
 {
-diag1 += a[i][i];
-diag2 += a[i][n-i];
+diag1 += a[i];
+diag2 += a[n-i];
+i++;
+a += size;
 }
-printf("%d, %d", diag1, diag2);
+printf("%d, %d\n", diag1, diag2);
 }
