@@ -21,5 +21,5 @@ diag2 += a[n-i];
 i++;
 a += size;
 }
-printf("%d, %d\n", diag1, diag2);
+printf("%d, %d \n", diag1, diag2);
 }
