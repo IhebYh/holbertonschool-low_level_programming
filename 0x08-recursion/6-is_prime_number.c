@@ -6,12 +6,11 @@
  */
 int is_prime_number(int n)
 {
-if (n < 3)
+if (n == 3)
 return (1);
 else
-return (prime_checker(2,n));
+return (prime_checker(2, n));
 }
-
 /**
  * prime_checker - entry point
  * @n:int
@@ -25,6 +24,6 @@ return (0);
 else if (p > (n / 2))
 return (1);
 else 
-return prime_checker(p + 1, n);
+return (prime_checker(p + 1, n));
 
 }
