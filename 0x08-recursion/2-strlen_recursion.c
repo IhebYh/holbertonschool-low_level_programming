@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts_recursion - entry point
+ * _strlen_recursion - entry point
  * @s:char
  * Return:void
  */
