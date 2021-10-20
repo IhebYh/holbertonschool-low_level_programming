@@ -9,7 +9,7 @@ int _sqrt_recursion(int n)
 if (n == 0)
 return (-1);
 else
-return (sqrt_verif(1,n));
+return (sqrt_verif(1, n));
 }
 /**
  * sqrt_verif - entry point
