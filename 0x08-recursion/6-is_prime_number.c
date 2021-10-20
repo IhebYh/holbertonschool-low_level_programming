@@ -23,7 +23,6 @@ if ((n < 2) || (n % p == 0))
 return (0);
 else if (p > (n / 2))
 return (1);
-else 
+else
 return (prime_checker(p + 1, n));
-
 }
