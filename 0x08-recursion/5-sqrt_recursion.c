@@ -21,6 +21,8 @@ int sqrt_verif(int sq, int n)
 {
 if (sq * sq == n)
 return (sq);
+else if (sq > n)
+return (-1);
 else
 return (sqrt_verif(sq + 1, n));
 }
