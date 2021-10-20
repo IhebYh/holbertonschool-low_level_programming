@@ -7,7 +7,7 @@
 int is_palindrome(char *s)
 {
 int n = 0;
-if (s == "")
+if (*s == "")
 return (1);
 else
 while(*s != '\0'){
@@ -23,7 +23,7 @@ return (isPal(*s, 0, n - 1));
  * @i:int
  * Return:int
  */
-int isPal(char *s, int i, int i)
+int isPal(char *s, int i, int n)
 {
 if (s[i] != s[n])
 return (0);
