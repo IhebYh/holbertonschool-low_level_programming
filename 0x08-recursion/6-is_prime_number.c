@@ -6,7 +6,7 @@
  */
 int is_prime_number(int n)
 {
-if (n == 3)
+if (n == 2)
 return (1);
 else
 return (prime_checker(2, n));
@@ -19,7 +19,7 @@ return (prime_checker(2, n));
  */
 int prime_checker(int p, int n)
 {
-if ((p < 2) || (n % p == 0))
+if ((n < 2) || (n % p == 0))
 return (0);
 else if (p > (n / 2))
 return (1);
