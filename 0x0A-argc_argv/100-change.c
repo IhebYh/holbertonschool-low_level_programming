@@ -24,7 +24,7 @@ for (i = 0; i < 5 && res; i++)
 {
 n = res / a[i];
 cents += n;
-res -= n *a[i];
+res -= n * a[i];
 }
 printf("%d\n", cents);
 return (0);
