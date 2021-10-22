@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 /**
  * main - entry point
  * @argc:int
@@ -9,23 +10,24 @@
 
 int main(int argc, char *argv[])
 {
-int i, ret;
-char str[10];
-char *ptr;
-if (argc != 0)
+int i, j, res = 0;
+if (argc == 0)
 {
 printf("0\n");
 return (1);
 }
-for(i = 0; i < argc; i++)
+for (i = 0; i < argc; i++)
 {
-ret += strtol(str, &ptr, 10);
-if (strlen(ptr) > 0)
+for (j = 0; j < strlen(argv[i]); i++)
 {
-printf("Error");
+if (!(isdigit(argv[i][j])))
+{
+printf("Error\n");
 return (1);
 }
 }
-printf("%d\n",ret);
+res += atoi(argv[i][j]);
+}
+printf("%d\n",res);
 return (0);
 }
