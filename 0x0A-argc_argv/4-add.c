@@ -28,6 +28,6 @@ return (1);
 }
 res += atoi(argv[i][j]);
 }
-printf("%d\n",res);
+printf("%d\n", res);
 return (0);
 }
