@@ -17,7 +17,7 @@ printf("Error\n");
 return (1);
 }
 res = atoi(argv[1]);
-if (res < 0)
+if (res =< 0)
 printf("0\n");
 else
 for (i = 0; i < 5; i++)
