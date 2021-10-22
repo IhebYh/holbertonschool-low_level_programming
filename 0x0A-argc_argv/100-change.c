@@ -17,7 +17,7 @@ printf("Error\n");
 return (1);
 }
 res = atoi(argv[1]);
-if (res < 0)
+if (res < 1)
 printf("0\n");
 else
 {
@@ -27,7 +27,7 @@ n = res / a[i];
 cents += n;
 res -= n *a[i];
 }
-}
 printf("%d\n", cents);
+}
 return (0);
 }
