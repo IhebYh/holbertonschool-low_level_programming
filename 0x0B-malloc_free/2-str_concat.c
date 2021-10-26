@@ -13,7 +13,7 @@ char *s;
 if (s1 == NULL)
 i = 0;
 else
-for(i = 0; s1[i]; i++)
+for (i = 0; s1[i]; i++)
 ;
 if (s2 == NULL)
 j = 0;
