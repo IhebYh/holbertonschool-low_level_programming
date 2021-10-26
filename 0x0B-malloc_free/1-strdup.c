@@ -13,7 +13,9 @@ if (str == NULL)
 return (NULL);
 for (; str[i]; i++)
 j++;
-s = malloc((j + 1 ) * sizeof(char));
+s = malloc((j + 1) * sizeof(char));
+if (s == 0)
+return (NULL);
 for (i = 0; i < j ; i++)
 s[i] = str[i];
 s[j] = '\0';
