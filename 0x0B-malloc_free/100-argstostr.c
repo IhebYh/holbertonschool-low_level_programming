@@ -19,7 +19,7 @@ for (j = 0; av[i][j] != '\0'; j++)
 k++;
 k++;
 }
-s = malloc((k + 1) * sizeof(char));
+s = malloc(sizeof(char) * k + 1);
 if (s == NULL)
 return (NULL);
 for (l = 0; l < ac; l++)
