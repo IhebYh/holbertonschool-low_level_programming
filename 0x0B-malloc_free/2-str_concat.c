@@ -8,7 +8,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-int i, j;
+unsigned int i, j;
 char *s;
 if (s1 == NULL)
 i = 0;
