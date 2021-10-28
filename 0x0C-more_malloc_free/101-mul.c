@@ -2,36 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/**
- * main - entry point
- * @argc:int
- * @argv:char
- * Return:int
- */
-int main(int argc, char *argv[])
-{
-char *mul, *r;
-int x, j;
-if (argc != 3)
-{
-printf("Error\n");
-exit(98);
-}
-x = isDigit(argv[1]);
-j = isDigit(argv[2]);
-if (j == 0 || x == 0)
-{
-printf("Error\n");
-exit(98);
-}
-r = malloc(strlen(argv[1]) + strlen(argv[2]));
-mul = malloc(strlen(argv[1]) + strlen(argv[2]));
-mul = infinite_mul(argv[1], argv[2], r);
-printf("%s\n", mul);
-free(r);
-free(mul);
-return (0);
-}
+
 /**
 * isDigit - entry point
 * @s:char
@@ -77,4 +48,34 @@ result[i] %= 10;
 }
 }
 return (result);
+}
+/**
+ * main - entry point
+ * @argc:int
+ * @argv:char
+ * Return:int
+ */
+int main(int argc, char *argv[])
+{
+char *mul, *r;
+int x, j;
+if (argc != 3)
+{
+printf("Error\n");
+exit(98);
+}
+x = isDigit(argv[1]);
+j = isDigit(argv[2]);
+if (j == 0 || x == 0)
+{
+printf("Error\n");
+exit(98);
+}
+r = malloc(strlen(argv[1]) + strlen(argv[2]));
+mul = malloc(strlen(argv[1]) + strlen(argv[2]));
+mul = infinite_mul(argv[1], argv[2], r);
+printf("%s\n", mul);
+free(r);
+free(mul);
+return (0);
 }
