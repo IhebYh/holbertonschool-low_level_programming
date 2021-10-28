@@ -35,6 +35,6 @@ s[k] = s1[k];
 for (l = 0; l < n; l++)
 s[k + l] = s2[l];
 }
-s[k + l] = '\0'
+ s[k + l] = '\0';
 return (s);  
 }
