@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * string_nconcat - entry point
  * @n:int
@@ -27,7 +28,7 @@ return (NULL);
 for (k = 0; s1[k] != '\0'; k++)
 s[k] = s1[k];
 for (l = k; l < i + n; l++)
-s[l] = s[l - k];
+s[l] = s2[l - k];
 s[l] = '\0';
 return (s);
 }
