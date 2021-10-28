@@ -27,7 +27,7 @@ if (s == NULL)
 return (NULL);
 for (k = 0; s1[k] != '\0'; k++)
 s[k] = s1[k];
-for (l = k; l < i + n; l++)
+for (l = k; l < (i + n); l++)
 s[l] = s2[l - k];
 s[l] = '\0';
 return (s);
