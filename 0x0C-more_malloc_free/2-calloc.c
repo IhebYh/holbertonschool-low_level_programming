@@ -12,7 +12,7 @@ unsigned int i;
 char *s;
 if (nmemb * size == 0)
 return (NULL);
-s = malloc(nmnemb * size);
+s = malloc(nmemb * size);
 if (s == NULL)
 return (NULL);
 for (i = 0; i < nmemb * size; i++)
