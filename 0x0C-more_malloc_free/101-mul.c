@@ -8,8 +8,6 @@
  * @argv:char
  * Return:int
  */
-char *infinite_mul(char *n1, char *n2, char *result);
-int isDigit(char *s);
 int main(int argc, char *argv[])
 {
 char *mul, *r;
@@ -35,10 +33,11 @@ free(mul);
 return (0);
 }
 /**
-* _isDigit - entry point
+* isDigit - entry point
 * @s:char
 * Return:int
 */
+int isDigit(char *s);
 int isDigit(char *s)
 {
 int i;
@@ -58,22 +57,24 @@ return (1);
  * @result:char
  * Return:char.
  */
+char *infinite_mul(char *n1, char *n2, char *result);
 char *infinite_mul(char *n1, char *n2, char *result)
 {
 int i, j;
-
-for(i = strlen(n1) - 1; i >= 0; i-- ) 
-{ 
-for(j = strlen(n2) - 1; j >= 0; j-- ) 
-{ 
-result[ i + j + 1 ] += ( n2[ j ] - '0') * (n1[i] - '0');
+for (i = strlen(n1) - 1; i >= 0; i--)
+{
+for (j = strlen(n2) - 1; j >= 0; j--)
+{
+result[i + j + 1] += (n2[j] - '0') * (n1[i] - '0');
 }
-} 
-for(i = strlen(n1) + strlen(n2); i >= 0; i-- ){ 
-if( result[ i ] >= 10 ){ 
-result[ i - 1 ] +=result[ i ] / 10;
-result[ i ] %= 10; 
-} 
-} 
+}
+for (i = strlen(n1) + strlen(n2); i >= 0; i--)
+{
+if (result[i] >= 10)
+{
+result[i - 1] += result[i] / 10;
+result[i] %= 10;
+}
+}
 return (result);
 }
