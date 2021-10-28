@@ -7,7 +7,7 @@
  * @s2:char
  * Return:void
  */
-char *string_noncat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *s;
 unsigned int i, j, k, l;
@@ -15,7 +15,7 @@ for (i = 0; s1[i] != '\0'; i++)
 ;
 for (j = 0; s2[j] != '\0'; j++)
 ;
-if ( n >= j)
+if (n >= j)
 {
 s = malloc(i + j);
 if (s == NULL)
