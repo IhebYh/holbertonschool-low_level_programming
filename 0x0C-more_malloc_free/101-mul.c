@@ -4,31 +4,42 @@
 #include <string.h>
 /**
  * main - entry point
+ * @argc:int
+ * @argv:char
  * Return:int
  */
+char *infinite_mul(char *n1, char *n2, char *result);
+int isDigit(char *s);
 int main(int argc, char *argv[])
 {
 char *mul, *r;
-if (argc != 2)
+int x, j;
+if (argc != 3)
 {
 printf("Error\n");
 exit(98);
 }
-if (_isDigit(argv[1]) * _isDigit(argv[0]) == 0)
+x = isDigit(argv[1]);
+j = isDigit(argv[2]);
+if (j == 0 || x == 0)
 {
-printf("Error\n")
+printf("Error\n");
 exit(98);
 }
-mul = infinite_mul(argv[1], argv[0], char *r, strlen(argv[1]) + strlen(argv[0]);
-printf("%s\n",mul);
-return (0);  
+r = malloc(strlen(argv[1]) + strlen(argv[2]));
+mul = malloc(strlen(argv[1]) + strlen(argv[2]));
+mul = infinite_mul(argv[1], argv[2], r);
+printf("%s\n", mul);
+free(r);
+free(mul);
+return (0);
 }
 /**
 * _isDigit - entry point
-* @s1:char
+* @s:char
 * Return:int
 */
-int _isDigit(char *s)
+int isDigit(char *s)
 {
 int i;
 for (i = 0; s[i] != '\0'; i++)
@@ -44,42 +55,25 @@ return (1);
  * infinite_mul - multiply two numbers
  * @n1:char
  * @n2:char.
- * @r:char
- * @size_r:int
+ * @result:char
  * Return:char.
  */
-char *infinite_mul(char *n1, char *n2, char *r, int size_r)
+char *infinite_mul(char *n1, char *n2, char *result)
 {
-int i, j, k, h, m = 0, n;
+int i, j;
 
-for (i = 0; n1[i]; i++)
-;
-for (j = 0; n2[j]; j++)
-;
-if (i > size_r || j > size_r)
-return (0);
-for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
-{
-n = m;
-if (i >= 0)
-n *= n1[i] - '0';
-if (j >= 0)
-n *= n2[j] - '0';
-if (i < 0 && j < 0 && n == 0)
-{
-break;
+for(i = strlen(n1) - 1; i >= 0; i-- ) 
+{ 
+for(j = strlen(n2) - 1; j >= 0; j-- ) 
+{ 
+result[ i + j + 1 ] += ( n2[ j ] - '0') * (n1[i] - '0');
 }
-m = n / 10;
-r[k] = n % 10 + '0';
-}
-r[k] = '\0';
-if (i >= 0 || j >= 0 || m)
-return (0);
-for (k -= 1, h = 0; h < k; k--, h++)
-{
-m = r[k];
-r[k] = r[h];
-r[h] = m;
-}
-return (r);
+} 
+for(i = strlen(n1) + strlen(n2); i >= 0; i-- ){ 
+if( result[ i ] >= 10 ){ 
+result[ i - 1 ] +=result[ i ] / 10;
+result[ i ] %= 10; 
+} 
+} 
+return (result);
 }
