@@ -22,7 +22,7 @@ for (j = 0; s2[j] != '\0'; j++)
 ;
 if (n >= j)
 n = j;
-s = malloc(sizeof(char) * (i + n + 1));
+s = malloc(sizeof(char) * (i + n + 2));
 if (s == NULL)
 return (NULL);
 for (k = 0; s1[k] != '\0'; k++)
