@@ -67,5 +67,5 @@ char *d = dest;
 while (*source)
 *d++ = *source++;
 *d = '\0';
-return (d);
+return (dest);
 }
