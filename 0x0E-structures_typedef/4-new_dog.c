@@ -19,7 +19,7 @@ if (name == NULL)
 nd->name = NULL;
 else
 {
-nd->name = malloc(sizeof(length(name) + 1));
+nd->name = malloc(length(name) + 1);
 if (nd->name == NULL)
 {
 free(nd);
@@ -31,7 +31,7 @@ if (owner == NULL)
 nd->owner = NULL;
 else
 {
-nd->owner = malloc(sizeof(length(owner) + 1));
+nd->owner = malloc(length(owner) + 1);
 if (nd->owner == NULL)
 {
 free(nd->name);
