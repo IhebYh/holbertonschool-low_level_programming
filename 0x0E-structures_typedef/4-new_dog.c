@@ -34,6 +34,7 @@ else
 nd->owner = malloc(sizeof(length(owner) + 1));
 if (nd->owner == NULL)
 {
+free(nd->name);
 free(nd);
 return (NULL);
 }
@@ -64,7 +65,7 @@ char *cpy(char *dest, char *source)
 {
 int i = 0;
 while (dest[i++])
-dest[i] = source[j];
+dest[i] = source[i];
 dest[i] = '\0';
 return (dest);
 }
