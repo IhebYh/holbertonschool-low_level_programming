@@ -64,7 +64,7 @@ return (i);
 char *cpy(char *dest, char *source)
 {
 int i = 0;
-while (dest[i++])
+while (source[i++])
 dest[i] = source[i];
 dest[i] = '\0';
 return (dest);
