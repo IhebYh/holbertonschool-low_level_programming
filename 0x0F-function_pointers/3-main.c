@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 /**
  * main - entry point
@@ -19,12 +20,12 @@ exit(98);
 x = atoi(argv[1]);
 y = atoi(argv[3]);
 test = get_op_func(argv[2]);
-if (fun == NULL)
+if (test == NULL)
 {
 printf("Error\n");
 exit(99);
 }
 res = test(x, y);
-printf("%d\n", c);
+printf("%d\n", res);
 return (0);
 }
