@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 /**
  * main- entry point
  * @argv:char
@@ -24,8 +25,8 @@ exit(2);
 if (atoi(argv[1]) > 0)
 {
 while ( i < (atoi(argv[1]) - 1))
-printf("%02hhx", p[i++]);
-printf("%02hhx\n",p[i]);
+printf("%02hhx ", p[i++]);
+printf("%hhx\n",p[i]);
 }
 return (0);
 }
