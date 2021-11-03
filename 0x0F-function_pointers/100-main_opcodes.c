@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 /**
  * main- entry point
@@ -11,7 +10,6 @@ int main(int argc, char *argv[])
 {
 int i = 0, cmp;
 unsigned char *p;
-p = (unsigned char *) main;
 if (argc != 2)
 {
 printf("Error\n");
@@ -23,6 +21,7 @@ if (cmp < 0)
 printf("Error\n");
 exit(2);
 }
+p = (unsigned char *)main;
 if (cmp > 0)
 {
 while (i < (cmp - 1))
