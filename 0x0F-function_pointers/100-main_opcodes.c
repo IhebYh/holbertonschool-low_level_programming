@@ -25,9 +25,9 @@ exit(2);
 }
 if (cmp > 0)
 {
-while ( i < (cmp - 1))
+while (i < (cmp - 1))
 printf("%02hhx ", p[i++]);
-printf("%hhx\n",p[i]);
+printf("%hhx\n", p[i]);
 }
 return (0);
 }
