@@ -30,7 +30,7 @@ printf("%s", s);
  */
 void print_i(va_list l)
 {
-  printf("%d", va_arg(l, int));
+printf("%d", va_arg(l, int));
 }
 /**
  * print_f - print integer
