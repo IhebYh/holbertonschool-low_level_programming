@@ -18,6 +18,6 @@ for (i = 0; i < n; i++)
 {
 sum += va_arg(l, int);
 }
-va_end(list);
+va_end(l);
 return (sum);
 }
