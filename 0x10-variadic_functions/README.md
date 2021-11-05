@@ -1,0 +1,1 @@
+<h1> Variadic Functions in C lang <\h1>
