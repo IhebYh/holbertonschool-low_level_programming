@@ -30,7 +30,7 @@ printf("%s", s);
  */
 void print_i(va_list l)
 {
-printf("%i", va_arg(l, int);
+  printf("%d", va_arg(l, int));
 }
 /**
  * print_f - print integer
@@ -39,7 +39,7 @@ printf("%i", va_arg(l, int);
  */
 void print_f(va_list l)
 {
-printf("%f", va_arg(l, int);
+printf("%f", va_arg(l, double));
 }
 /**
  * print_all - print everything
@@ -50,7 +50,7 @@ void print_all(const char * const format, ...)
 {
 unsigned int i, j;
 t_print t[] = {{"c", print_c}, {"s", print_s}, {"i", print_i}, {"f",
-print_}, {NULL, NULL}};
+print_f}, {NULL, NULL}};
 va_list valist;
 char *s = "";
 va_start(valist, format);
