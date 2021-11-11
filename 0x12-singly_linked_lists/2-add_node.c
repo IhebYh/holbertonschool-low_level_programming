@@ -1,5 +1,5 @@
 #include "lists.h"
-int _strlen(char *str);
+unsigned int _strlen(char *str);
 /**
 * add_node - adding a node at the beginning
 * @head:list_t
@@ -11,13 +11,18 @@ list_t *add_node(list_t **head, const char *str)
 list_t *new;
 if (str == NULL)
 return (NULL);
-new = malloc(sizeof(struct list_t));
+new = malloc(sizeof(list_t));
 if (new == NULL)
-return (null);
+return (NULL);
 new->str  = strdup(str);
-new->len = _strlen(str);
-new->next = (*head);
-(*head) = new;
+if (new->str == NULL)
+{
+free(new);
+return (NULL);
+}
+new->len = _strlen(new->str);
+new->next = *head;
+*head = new;
 return (new);
 }
 /**
@@ -25,10 +30,10 @@ return (new);
 * @str:string
 * Return:int
 */
-int _strlen(char *str)
+unsigned int _strlen(char *str)
 {
-int i;
-while(str)
+int i = 0;
+while (str[i] != '\0')
 i++;
 return (i);
 }
