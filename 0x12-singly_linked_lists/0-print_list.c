@@ -12,9 +12,9 @@ const list_t *n = h;
 for (; n; i++)
 {
 if (n->str == NULL)
-printf("[0] (nil)");
+printf("[0] (nil)\n");
 else 
-printf("[%d] %s", n->len, n->str);
+printf("[%d] %s\n", n->len, n->str);
 n = n->next;
 }
 return (i);
