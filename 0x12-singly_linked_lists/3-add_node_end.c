@@ -5,9 +5,9 @@
 * @str:char
 * Return:list_t
 */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-list_t *new;
+list_t *new, *last = *head;
 if (str == NULL)
 return (NULL);
 new = malloc(sizeof(list_t));
@@ -20,19 +20,15 @@ free(new);
 return (NULL);
 }
 new->len = _strlen(new->str);
-new->next = *head;
-*head = new;
+new->next = NULL;
+if (*head == NULL)
+{
+*head = NULL;
+return (NULL);
+}
+while (last->next != NULL)
+*last = last->next;
+last->next = new
 return (new);
 }
-/**
-* _strlen - calculate the length of a string
-* @str:string
-* Return:int
-*/
-unsigned int _strlen(char *str)
-{
-int i = 0;
-while (str[i] != '\0')
-i++;
-return (i);
-}
+
