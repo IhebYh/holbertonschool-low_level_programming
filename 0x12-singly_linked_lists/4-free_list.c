@@ -13,6 +13,6 @@ while (n != NULL)
 checker = n->next;
 free(n->str);
 free(n);
-n = checker
+n = checker;
 }
 }
