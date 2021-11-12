@@ -29,7 +29,19 @@ return (new);
 last = *head;
 while (last->next)
 last = last->next;
-last->next = new
+last->next = new;
 return (new);
+}
+/**
+* _strlen - calculate the length of a string
+* @str:string
+* Return:int
+*/
+unsigned int _strlen(char *str)
+{
+int i = 0;
+while (str[i] != '\0')
+i++;
+return (i);
 }
 
