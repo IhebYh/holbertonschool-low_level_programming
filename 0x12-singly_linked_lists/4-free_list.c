@@ -6,12 +6,13 @@
 */
 void free_list(list_t *head)
 {
-list_t *n;
-while (head != NULL)
+list_t *n, *checker;
+n = head;
+while (n != NULL)
 {
-n = head->next;
+checker = n->next;
 free(n->str);
 free(n);
-n = head;
+n = checker
 }
 }
