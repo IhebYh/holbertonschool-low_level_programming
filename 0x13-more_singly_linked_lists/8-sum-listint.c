@@ -1,0 +1,19 @@
+#include "lists.h"
+/**
+ * sum_listint - sum of elements in the list
+ * @head:listint_t
+ * Return:int
+ */
+int sum_listint(listint_t *head)
+{
+int sum = 0;
+if (head== NULL)
+return (NULL);
+while (head ->next)
+{
+sum += head->n;
+head = head->next;
+}
+sum += head->n
+return (sum);
+}
