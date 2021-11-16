@@ -5,7 +5,7 @@
 * @index:int
 * Return:int
 */
-int *get_nodeint_at(listint_t *head, unsigned int index)
+int *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 size_t i = 0;
 while (i < index && head->next)
