@@ -7,12 +7,13 @@
 */
 int *get_nodeint_at(listint_t *head, unsigned int index)
 {
-int i = 0;
-while (head)
+size_t i = 0;
+while (i < index)
 {
-if (i == index)
-return (head->n);
 head = head->next;
+i++;
 }
+if (x < index)
 return (NULL);
+return(head);
 }
