@@ -12,7 +12,7 @@ return;
 while (*head)
 {
 n = *head;
-n = (*head)->next;
+*head = (*head)->next;
 free(n);
 }
 head = NULL;
