@@ -13,7 +13,7 @@ while (i < index && head->next)
 head = head->next;
 i++;
 }
-if (x < index)
+if (i < index)
 return (NULL);
-return(head);
+return (head);
 }
