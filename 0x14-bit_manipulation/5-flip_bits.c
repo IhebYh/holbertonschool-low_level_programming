@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * flip_bits - flipping bits 
+ * flip_bits - flipping bits
  * @n:int
  * @m:int
  * Return:int
@@ -13,7 +13,7 @@ tmp = n ^ m;
 while (tmp > 0)
 {
 count++;
-tmp &= (tmp-1);
+tmp &= (tmp - 1);
 }
-return count;
+return (count);
 }
