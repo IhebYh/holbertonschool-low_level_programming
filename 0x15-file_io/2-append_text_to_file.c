@@ -13,11 +13,11 @@ return (-1);
 fd = open(filename, O_APPEND | O_WRONLY);
 if (fd == -1)
 return (-1);
-if (text_content != NULL
+if (text_content != NULL)
 {
 for (len = 0; text_content[len] != '\0'; len++)
 ;
-w =write(fd, text_content, len);
+w = write(fd, text_content, len);
 if (w == -1)
 return (-1);
 }
