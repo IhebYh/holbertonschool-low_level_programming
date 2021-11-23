@@ -1,3 +1,10 @@
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <elf.h>
 typedef struct {
   uint8     e_ident[16];         /* Magic number and other info */
   uint16    e_type;              /* Object file type */
@@ -18,7 +25,7 @@ typedef struct {
 int main(int argc, char *argv) {
   struct Elf64Hdr elf_header;
 
-  FILE* file = fopen(argv[1], "rb");
+  FILE* file = open(argv[1], O_RDWR);
   if(file) {
     // read the header
     fread(&elf_header, 1, sizeof(elf_header), file);
@@ -42,7 +49,7 @@ int main(int argc, char *argv) {
      }
 
     // finally close the file
-    fclose(file);
+    close(file);
   }
   return (0);
 }
