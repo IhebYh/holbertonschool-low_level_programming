@@ -7,9 +7,10 @@
 */
 size_t print_dlistint(const dlistint_t *h)
 {
+	int i;
 	size_t s = 0;
 
-	while (h->next)
+	for (i = 0; h; i++, h->next)
 	{
 		print("%d\n", h->n);
 		s++;
