@@ -12,11 +12,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_table_t *node;
 	unsigned long int i;
 
-	if (!ht || !key)
-		return (NULL);
+	if (ht == NULL || ht->array == NULL || ht->size == 0
+		|| key == NULL || strlen(key) == 0)
+		{
+			return (NULL);
+		}
 	i = key_index((const unsigned char *)key, ht->size);
 	node = ht->array[i];
-	while (node)
+	while (node != NULL)
 	{
 		if (strcmp(node->key, key) == 0)
 			return (node->value);
