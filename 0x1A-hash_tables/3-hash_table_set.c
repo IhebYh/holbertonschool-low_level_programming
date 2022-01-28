@@ -9,13 +9,14 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	unsigned long int i, size;
+	hash_node_t *node, *tmp;
+
 	if (ht == NULL || key == NULL || value == NULL)
 	{
 		return (0);
 	}
-	unsigned long int i, size = ht->size;
-	hash_node_t *node, *tmp;
-
+	size = ht->size;
 	tmp = ht->array[i = key_index((const unsigned char *)key, size)];
 	while (tmp != NULL)
 	{
@@ -35,8 +36,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->key = strdup(key);
 	if (node->key == NULL)
 	{
-		free(node->key);
-		free(node);
+		free_key(node);
 		return (0);
 	}
 	node->value = strdup(value);
@@ -49,4 +49,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->next = ht->array[i];
 	ht->array[i] = node;
 	return (1);
+}
+/**
+ * free_key - a function that frees the hash table node's key
+ * @n: hash table node
+ * Return: void
+ */
+void free_key(hash_node_t *n)
+{
+
+	free(n->key);
+	free(n);
 }
