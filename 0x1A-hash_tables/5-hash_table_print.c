@@ -10,12 +10,12 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *tmp;
-	char flag = 0; /* printing style handler */
+	int flag = 0; /* printing style handler */
 
 	if (ht == NULL || ht->array == NULL)
 		return;
 	printf("{");
-	for (i = 0; i < ht->size; i++)
+	for (i = 0; i <= ht->size; i++)
 	{
 		tmp = ht->array[i];
 		while (tmp != NULL)
