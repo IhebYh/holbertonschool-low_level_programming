@@ -10,7 +10,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int i, size;
-	hash_node_t *node, *tmp;
+	hash_node_t *hash_node, *tmp;
 
 	if (ht == NULL || key == NULL || value == NULL)
 	{
@@ -30,34 +30,40 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		tmp = tmp->next;
 	}
+	hash_node = make_hash_node(key, value);
+	if (hash_node == NULL)
+		return (0);
+	hash_node->next = ht->array[index];
+	ht->array[index] = hash_node;
+	return (1);
+}
+/**
+ * make_hash_node - creates a new hash node
+ * @key: key for the node
+ * @value: for the node
+ *
+ * Return: the new node, or NULL on failure
+ */
+hash_node_t *make_hash_node(const char *key, const char *value)
+{
+	hash_node_t *node;
+
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
-		return (0);
+		return (NULL);
 	node->key = strdup(key);
 	if (node->key == NULL)
 	{
-		free_key(node);
-		return (0);
+		free(node);
+		return (NULL);
 	}
 	node->value = strdup(value);
 	if (node->value == NULL)
 	{
-		free(node->value);
+		free(node->key);
 		free(node);
-		return (0);
+		return (NULL);
 	}
-	node->next = ht->array[i];
-	ht->array[i] = node;
-	return (1);
-}
-/**
- * free_key - a function that frees the hash table node's key
- * @n: hash table node
- * Return: void
- */
-void free_key(hash_node_t *n)
-{
-
-	free(n->key);
-	free(n);
+	node->next = NULL;
+	return (node);
 }
