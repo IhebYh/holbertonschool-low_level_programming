@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Technical interview
+"""
 
 
 def island_perimeter(grid):
@@ -15,13 +18,13 @@ def island_perimeter(grid):
     The island doesn’t have “lakes” (water inside that isn’t
     connected to the water around the island).
     """
-    x = 0
+    p = 0
     for x in range(0, len(grid), 1):
         for j in range(0, len(grid[0]), 1):
             if grid[x][j] == 1:
-                x = x + 4
+                p = p + 4
                 if j - 1 >= 0 and grid[x][j - 1] == 1:
-                    x -= 2
+                    p -= 2
                 if x - 1 >= 0 and grid[x - 1][j] == 1:
-                    x -= 2
-    return (x)
+                    p -= 2
+    return (p)
