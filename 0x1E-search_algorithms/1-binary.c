@@ -50,7 +50,7 @@ int binary_search(int *array, size_t size, int value)
 void _print(int *array, size_t size, size_t index)
 {
 	printf("Searching in array: ");
-	for(; index < size; index++)
+	for (; index < size; index++)
 	{
 		printf("%d", array[index]);
 		if (index < size - 1)
